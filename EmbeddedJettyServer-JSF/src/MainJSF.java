@@ -15,14 +15,8 @@ public class MainJSF {
 		WebAppContext webapp = new WebAppContext();
 		webapp.setContextPath("/");
 		webapp.setWar("./WebContent");
-		ServletHandler servletHandler = new ServletHandler();
-		servletHandler.addServletWithMapping(
-				javax.faces.webapp.FacesServlet.class, "*.xhtml");
-		servletHandler.addServletWithMapping(
-				javax.faces.webapp.FacesServlet.class, "*.jsf");
 		HandlerList handlerList = new HandlerList();
 		handlerList.addHandler(webapp);
-		handlerList.addHandler(servletHandler);
 		server.setHandler(handlerList);
 		server.start();
 		Handler handlers[] = server.getHandlers();

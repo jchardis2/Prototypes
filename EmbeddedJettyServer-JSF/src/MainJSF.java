@@ -24,6 +24,6 @@ public class MainJSF {
 			System.out.println("Handler name: " + handler);
 		}
 		server.join();
-		System.out.println("Server Stopped");
+		System.out.println("Server Stopped"); 
 	}
 }

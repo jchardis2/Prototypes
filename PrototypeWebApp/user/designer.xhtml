@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<script type="text/javascript" src="/includes/jquery-2.0.3.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet"
+		href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	</link>
+	<!-- Optional theme -->
+	<link rel="stylesheet"
+		href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+	</link>
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+		src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+	<!-- MY CSS -->
+
+
+	<!-- 	MY JS -->
+	<script type="text/javascript" src="/includes/designer.js"></script>
+	<script type="text/javascript" src="/includes/webdesigner.js"></script>
+	<script type="text/javascript" src="/includes/components.js"></script>
+	<title>Web Designer - Designer</title>
+</h:head>
+<h:body onload="addWidgetsToWidgetDrawer()">
+	<ui:include page="/includes/nav-bar-main.xhtml"></ui:include>
+	<div id="umodal" class="modal " role="dialog" style="padding: 50px;">
+		This is a simple aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdfsaf <br />
+		This is a simple aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdfsaf <br />
+		This is a simple aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdfsaf <br />
+	</div>
+	<div class="row" style="min-height: 1800px; background-color: gray;">
+		<div id="widgetDrawer" class="col-xs-1 col-sm-1 col-md-2 col-lg-2"
+			style="overflow-x: scroll; overflow-y: hidden; min-height: 900px;">
+			<div id="accordion"></div>
+		</div>
+		<div id="mainContentContainer"
+			class=".col-xs-11 col-sm-11 col-md-10 col-lg-10"
+			style="min-height: 900px; background-color: black; padding: 5px;">
+			<div id="mainContent"
+				class="droppable ui-widget-header wd-ui-component"
+				style="min-height: 900px; background-color: white;">
+				<p>Content goes here</p>
+
+			</div>
+
+		</div>
+	</div>
+
+	<ui:include page="/includes/footer.xhtml"></ui:include>
+</h:body>
+</html>

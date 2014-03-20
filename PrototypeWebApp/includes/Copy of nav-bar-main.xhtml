@@ -1,0 +1,53 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand " href="/user/home.xhtml">Web Designer</a>
+			</div>
+
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="/user/projects.xhtml">Projects</a></li>
+					<li><a href="/user/designer.xhtml">Designer JSf</a></li>
+					<li><a href="/user/designer.jsp">Designer JSP</a></li>
+					<li><a href="/user/plugins.xhtml">Plugins</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">Organizations <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a class="active" href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Create Organization</a></li>
+						</ul></li>
+				</ul>
+				<h:form styleClass="navbar-form navbar-right">
+					<div class="form-group">
+						<h:commandButton id="loginButton" value="Logout"
+							styleClass="btn btn-default" action="#{loginView.logout}" />
+					</div>
+				</h:form>
+				<form class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+						</input>
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+	</nav>
+</ui:composition>

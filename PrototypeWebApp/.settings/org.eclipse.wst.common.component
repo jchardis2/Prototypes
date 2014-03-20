@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="PrototypeWebApp">
+        <wb-resource deploy-path="/WEB-INF/web.xml" source-path="/WEB-INF/web.xml"/>
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
+        <dependent-module archiveName="infinityappsolutions-lib-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/infinityappsolutions.lib/infinityappsolutions.lib">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="infinityappsolutions-server-lib-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/infinityappsolutions.server.lib/infinityappsolutions.server.lib">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/PrototypeWebApp/WebContent/WEB-INF/classes"/>
+        <property name="context-root" value="PrototypeWebApp"/>
+    </wb-module>
+</project-modules>

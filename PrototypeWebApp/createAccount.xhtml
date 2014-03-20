@@ -1,0 +1,85 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<script type="text/javascript" src="/includes/jquery-2.0.3.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet"
+		href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	</link>
+	<!-- Optional theme -->
+	<link rel="stylesheet"
+		href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+	</link>
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+		src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	function showPassword(){
+			  var showPasswordCheckBox = document.getElementById("showPassword");
+			  if(showPasswordCheckBox.checked){
+			        document.getElementById("wd_password").type="text";
+			        console.log('text');
+			  }else{
+			      document.getElementById("wd_password").type="password";
+			      console.log('pwd');
+			  }
+			}</script>
+
+	<!-- MY CSS -->
+	<title>Web Designer - Login</title>
+</h:head>
+<h:body>
+	<div class="container">
+		<div class="jumbotron" style="margin-top: 20%">
+			<h1>​Web Designer</h1>
+			​
+			<h:form prependId="false">
+				<h:panelGrid columns="2" cellpadding="5">
+					<h:outputLabel for="wd_username" value="Username: *" />
+					<p:inputText value="#{createAccountView.username}" id="wd_username"
+						required="true" label="username" />
+
+					<h:outputLabel for="wd_email" value="Email: *" />
+					<p:inputText value="#{createAccountView.email}" id="wd_email"
+						required="true" label="Email 1" />
+
+					<h:outputLabel for="wd_email" value="Email2: *" />
+					<p:inputText value="#{createAccountView.email2}" id="wd_email2"
+						required="true" label="Email 2" />
+
+					<h:outputLabel for="wd_password" value="Password: *" />
+					<p:password value="#{createAccountView.password}" id="wd_password"
+						required="true" label="Password 1" />
+					<h:outputLabel for="pwd2" value="Password 2: *" />
+					<p:password id="pwd2" value="#{createAccountView.password2}"
+						label="Password 2" required="true" />
+
+					<h:outputLabel for="wd_firstname" value="First Name: *" />
+					<p:inputText value="#{createAccountView.firstname}"
+						id="wd_firstname" required="true" label="First Name" />
+
+					<h:outputLabel for="wd_lastname" value="Last Name: *" />
+					<p:inputText value="#{createAccountView.lastname}" id="wd_lastname"
+						required="true" label="Last Name" />
+					<f:facet name="footer">
+						<p:commandButton id="createAccountButton" value="Create Account"
+							styleClass="btn btn-primary btn-lg"
+							actionListener="#{createAccountView.createAccount}" />
+						<p:commandButton id="navBackButton" value="Back To Login"
+							styleClass="btn btn-primary btn-lg" action="/login.xhtml" />
+
+					</f:facet>
+
+				</h:panelGrid>
+				<p:messages id="messages" showDetail="true" autoUpdate="true"
+					closable="true" />
+			</h:form>
+		</div>
+	</div>
+</h:body>
+</html>
